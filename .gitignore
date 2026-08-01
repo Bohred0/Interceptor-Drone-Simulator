@@ -1,0 +1,23 @@
+# MATLAB autosave/temp
+*.asv
+*.autosave
+*.slxc
+*.mex*
+slprj/
+
+# Figures & output
+results/
+*.fig
+*.png
+*.jpg
+*.mat
+
+# OS
+Thumbs.db
+.DS_Store
+
+# MATLAB project cache
+resources/project/
+
+# Keep the main project file
+!QuadSim.prj
