@@ -1,4 +1,4 @@
-function R = rotationMatrix(phi, theta, psi)
+function R = rotationMatrix(state)
 %ROTATIONMATRIX Computes the Direction Cosine Matrix (DCM)
 %
 % Inputs:
@@ -9,14 +9,14 @@ function R = rotationMatrix(phi, theta, psi)
 % Output:
 %   R     - Rotation matrix from NED frame to body frame
 
-cphi = cos(phi);
-sphi = sin(phi);
+cphi = cos(state.eta(4));
+sphi = sin(state.eta(4));
 
-cth = cos(theta);
-sth = sin(theta);
+cth = cos(state.eta(5));
+sth = sin(state.eta(5));
 
-cpsi = cos(psi);
-spsi = sin(psi);
+cpsi = cos(state.eta(6));
+spsi = sin(state.eta(6));
 
 Rv_v1=[cpsi spsi 0;
       -spsi cpsi 0;
